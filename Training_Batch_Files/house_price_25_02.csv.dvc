@@ -1,0 +1,4 @@
+outs:
+- md5: 8c28ab743554daaf70333a5958864ead
+  size: 114664
+  path: house_price_25_02.csv

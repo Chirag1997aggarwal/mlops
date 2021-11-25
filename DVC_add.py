@@ -6,12 +6,13 @@ import os
 from glob import glob
 
 
-data_dirs = ["Training_Batch_Files","Prediction_Batch_files"]
+data_dirs = [r"F:\chirag\mlops\mlops\Training_Batch_Files",r"F:\chirag\mlops\mlops\Prediction_Batch_files"]
 
 for data_dir in data_dirs:
-    files = glob(data_dir + r"/*.csv")
+    files = glob(data_dir + r"\*.csv")
+    print(files)
     for filePath in files:
-        # print(f"dvc add {filePath}")
+        print(f"dvc add {filePath}")
         os.system(f"dvc add {filePath}")
 
 print("\n #### all files added to dvc ####")
